@@ -1,0 +1,108 @@
+/* Style untuk header */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    margin-left: 15px; 
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Style untuk bagian About Me */
+#about {
+    padding: 80px 0;
+}
+
+#about h2 {
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+#about p {
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+}
+
+#about ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+
+#about ul li {
+    margin-bottom: 10px; 
+}
+
+.progress {
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+/* Style untuk bagian Portfolio */
+#portfolio {
+    padding: 80px 0; 
+}
+
+#portfolio h2 {
+    margin-bottom: 40px; 
+    text-align: center; 
+}
+
+/* Style untuk card */
+.card {
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    transition: transform 0.3s; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-img-top {
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.btn-primary {
+    font-size: 1rem; 
+}
+
+#contact {
+    background-color: #f8f9fa; 
+    padding: 80px 0; 
+    text-align: center; 
+}
+
+#contact h2 {
+    margin-bottom: 40px; 
+}
+
+#contact p {
+    font-size: 1.2rem; 
+}
+
+#contact ul {
+    list-style: none; 
+    padding: 0; 
+}
+
+#contact ul li {
+    margin-bottom: 15px; 
+    font-size: 1.1rem; 
+}
+
+#contact ul li strong {
+    font-weight: bold; 
+}
