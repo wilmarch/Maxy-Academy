@@ -1,0 +1,19 @@
+.card {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transisi perubahan warna latar belakang dan bayangan */
+  }
+
+  .card:hover {
+    background-color: #ffc107; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
+    animation: bounce 0.5s infinite alternate; 
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }

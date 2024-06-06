@@ -1,0 +1,31 @@
+.mentor-item {
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+  }
+  
+  .mentor-item.adding {
+    opacity: 0;
+  }
+  
+  
+  .deleting {
+    animation: fadeOut 0.3s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+  }
+  
+  .mentor-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  

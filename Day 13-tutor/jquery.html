@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            #tombol{
+                background-color: red;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="contoh">data contoh id <span>test</span></div>
+        <div class="kelas">data contoh kelas</div>
+        <div id="tombol">tombol</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(()=>{
+                console.log("#contoh").text
+                console.log("#contoh").html
+                $("tombo").click(()=>{
+                    alert("tombol di klik")
+                })
+            });
+        </script>
+       
+    </body>
+</html>

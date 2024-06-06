@@ -1,0 +1,43 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="title">Location</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <p v-if="location">Latitude: {{ location.latitude }}, Longitude: {{ location.longitude }}</p>
+      <button @click="getLocation">Get Location</button>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      location: null
+    };
+  },
+  methods: {
+    getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          position => {
+            this.location = {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude
+            };
+          },
+          error => {
+            console.error('Error getting location:', error.message);
+          }
+        );
+      } else {
+        console.error('Geolocation is not supported by this browser.');
+      }
+    }
+  }
+};
+</script>

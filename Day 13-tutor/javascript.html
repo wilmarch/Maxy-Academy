@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+            document.write("Hi, Head Tag")
+        </script>
+    </head>
+    <body>
+        <button onclick="reload">Click Me!</button>
+        <button onclick="bootsrap">bootstrap</button>
+        <div id="data"> Tulisan blablabla</div>
+        <button onclick="upper()">Upper</button>
+        <button onclick="lower()">Lower</button>
+
+
+
+
+
+
+
+
+        <h1 id="tag"><h2>Test</h2> ini Tag H1</h1>
+      <script>
+       console.log(document.getElementById("tag").innerText)
+       console.log(document.getElementById("tag").innerHTML)
+        document.write("Hi, Body Tag")
+        function namafungsi(){
+            document.write("tambah data dari fungsi")
+        }
+        namafungsi()
+        var fungsianonim = function(){
+            document.write("tambah data dari fungsi anonim")
+        }
+        fungsianonim();
+
+        function reload(){
+            window.location.reload();
+        }
+        function bootsrap(){
+            window.location = "https://getbootstrap.com/docs/4.5/getting-started/introduction/";
+        }
+
+        function upper(){
+            var data = document.getElementById("data").innerHTML;
+            document.getElementById("data").innerText = data.toUpperCase();
+        }
+        function lower(){
+            var data = document.getElementById("data").innerHTML;
+            document.getElementById("data").innerText = data.toLowerCase();
+        }
+        
+
+      </script>
+    </body>
+</html>

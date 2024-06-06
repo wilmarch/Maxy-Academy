@@ -1,0 +1,52 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="title">Camera</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <video id="video" autoplay></video>
+      <button @click="takePhoto">Take Photo</button>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <img :src="photoData" alt="Captured Photo" v-if="photoData">
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      photoData: null,
+      video: null,
+      canvas: null
+    };
+  },
+  mounted() {
+    this.startup();
+  },
+  methods: {
+    startup() {
+      this.video = document.getElementById('video');
+      this.canvas = document.getElementById('canvas');
+
+      navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+          this.video.srcObject = stream;
+        })
+        .catch(err => {
+          console.error('An error occurred: ', err);
+        });
+    },
+    takePhoto() {
+      const context = this.canvas.getContext('2d');
+      this.canvas.width = this.video.videoWidth;
+      this.canvas.height = this.video.videoHeight;
+      context.drawImage(this.video, 0, 0, this.canvas.width, this.canvas.height);
+      this.photoData = this.canvas.toDataURL('image/png');
+    }
+  }
+};
+</script>

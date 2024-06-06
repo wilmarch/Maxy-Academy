@@ -1,0 +1,54 @@
+  /* Animasi input form */
+  .input-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0,123,255,.25);
+    animation: input-focus-animation 0.5s ease;
+  }
+  
+  @keyframes input-focus-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+/* Animasi untuk tombol Hitung Status */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .btn-primary {
+    transition: transform 0.3s;
+  }
+  
+  .btn-primary:hover {
+    transform: scale(1.05);
+  }
+  
+/* Animasi card hasil status */
+@keyframes slideInUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .card-result {
+    animation: slideInUp 0.5s ease;
+  }
+  

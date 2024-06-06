@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 26</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Cumal Cemil</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#tentang">Tentang</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fitur">Alasan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimoni">Testimoni</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#lokasi-toko">Lokasi Toko</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="parallax">
+  <div class="header">
+    <h1>Cumal Cemil</h1>
+    <p>Platform web sederhana tentang makan ringan cumal cemil.</p>
+  </div>
+</div>
+
+<div class="content" id="tentang">
+  <h2 class="mb-4">Tentang Produk</h2>
+  <p>Renyah, gurih, dan menggugah selera. Macaroni kami hadir dalam berbagai varian rasa yang menggoda. Cocok untuk menemani waktu santai atau dijadikan camilan di setiap momen spesial. Segera nikmati kelezatan tak terlupakan dengan Macaroni kami!.</p>
+</div>
+
+<div class="parallax">
+</div>
+
+<div class="content" id="fitur">
+  <h2 class="mb-4"> Kenapa harus Cumal Cemil?</h2>
+  <p>Macaroni kami menawarkan pengalaman rasa yang unik dengan berbagai varian yang menggoda, mulai dari pedas hingga keju leleh. Dibuat dengan bahan-bahan berkualitas tinggi dan diproses secara teliti, setiap gigitan macaroni kami memberikan kombinasi sempurna antara renyah dan gurih. Cocok untuk dinikmati di berbagai kesempatan, mulai dari santai di rumah hingga acara bersama keluarga dan teman. Temukan kelezatan yang tak terlupakan dengan macaroni kami!</p>
+</div>
+
+<div class="parallax" id="testimoni">
+  <div class="card-group">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Testimoni Pelanggan</h3>
+        <p class="card-text">"Produk ini luar biasa! Saya sangat puas dengan layanan yang diberikan."</p>
+        <p class="card-text"><small class="text-muted">- Nama Pelanggan 1</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Testimoni Pelanggan</h3>
+        <p class="card-text">"Saya benar-benar menyukai produk ini. Rasanya luar biasa!"</p>
+        <p class="card-text"><small class="text-muted">- Nama Pelanggan 2</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Testimoni Pelanggan</h3>
+        <p class="card-text">"Sangat puas dengan kualitas produk dan layanan pelanggan yang ramah."</p>
+        <p class="card-text"><small class="text-muted">- Nama Pelanggan 3</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content" id="lokasi-toko">
+  <h2 class="mb-4">Lokasi Toko</h2>
+  <div id="mapid" class="mb-4"></div>
+</div>
+
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p>&copy; Resnu Wilmar Wibisana - Day 26</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  var mymap = L.map('mapid').setView([-6.2088, 106.8456], 13);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+
+  L.marker([-6.2088, 106.8456]).addTo(mymap)
+    .bindPopup("<b>Lokasi Toko</b><br>Jakarta,Indonesia").openPopup();
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .parallax {
+    background-image: url('https://www.bhinneka.com/blog/wp-content/uploads/2021/10/Cumal-Cemil-Paper-Pouch-Packaging-Mockup.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .parallax h1 {
+    font-size: 3em;
+  }
+
+  .parallax p {
+    font-size: 1.2em;
+    margin-top: 20px;
+    text-align: left; 
+  }
+
+  .content {
+    padding: 100px 20px;
+    text-align: center;
+    color: #333;
+  }
+
+  .content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 1.2em;
+    text-align: left; 
+  }
+
+  .header {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    max-width: 400px;
+    text-align: left; 
+  }
+
+  .card h3 {
+    color: #333;
+  }
+
+  .card p {
+    color: #666;
+  }
+
+  #mapid {
+    height: 400px;
+    width: 100%;
+    margin: 20px 0;
+  }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/animasi.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-semibold text-center mb-8">Mentor Management</h1>
+        <div class="flex flex-col sm:flex-row justify-center mt-4">
+            <input id="mentor-name" type="text" class="border rounded-l px-4 py-2 mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto sm:max-w-xs" placeholder="Nama mentor...">
+            <input id="mentor-specialization" type="text" class="border px-4 py-2 mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto sm:max-w-xs" placeholder="Spesialisasi...">
+            <input id="mentor-contact" type="text" class="border px-4 py-2 mb-2 sm:mb-0 sm:mr-2 w-full sm:w-auto sm:max-w-xs" placeholder="Kontak...">
+            <button id="add-mentor-btn" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-r px-4 py-2 w-full sm:w-auto sm:max-w-xs">Tambah Mentor</button>
+        </div>
+        <div id="error-message-container" class="text-center mt-2"></div>
+        <div id="mentor-list" class="max-w-lg mx-auto mt-8">
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; Resnu Wilmar - Day 18</p>
+    </footer>
+ 
+    <script src="./js/script.js"></script>
+</body>
+</html>
